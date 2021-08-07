@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang ="ja">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Count</title>
+        <link rel ="stylesheet" href="style2.css">
+    </head>
+    <body>
+
+        <h1>文字数カウント</h1>
+
+        <p><textarea></textarea></p>
+        <p><button>OK</button></p>
+
+        <div></div>
+
+        <script>
+            'use strict';
+
+            document.querySelector('button').addEventListener('click', () => {
+                let text = document.querySelector('textarea');
+                let p = document.createElement('p');
+
+                p.textContent = `文字数:${text.value.length}`;
+                document.querySelector('div').appendChild(p);
+            });
+
+        </script>
+    </body>
+</html>
